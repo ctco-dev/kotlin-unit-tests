@@ -1,0 +1,11 @@
+out
+.idea
+.gradle
+/build/
+dal/build
+*.ipr
+*.iws
+*.iml
+
+# Files below aren't commited, but should usually be present
+gradle.properties
