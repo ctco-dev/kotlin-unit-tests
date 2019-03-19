@@ -1,9 +1,7 @@
 # About
 
 This project was designed for various JVM Unit Test frameworks comparison.
-which could be used for kotlin. 
-Target code is placed in "application" module.
-
+Target code is written in Kotlin. It could be found in "application" module.
 
 # Contributing
 
