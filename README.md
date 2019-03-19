@@ -1,11 +1,11 @@
-#About
+# About
 
 This project was designed for various JVM Unit Test frameworks comparison.
 which could be used for kotlin. 
 Target code is placed in "application" module.
 
 
-#Contributing
+# Contributing
 
 Examples for each framework should be placed in a dedicated Gradle module 
 named examples-${framework}.
@@ -18,7 +18,7 @@ Maybe someone already took over this task.
 
 Also, please use pull requests for code validation.
 
-#Known Issues
+# Known Issues
 If you working behind a proxy please consider adding gradle.properties file
 ```
 systemProp.http.proxyHost=${proxy host}
