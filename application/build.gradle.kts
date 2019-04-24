@@ -1,12 +1,9 @@
-import kotlin.collections.listOf
-import org.gradle.api.tasks.testing.TestResult.ResultType.*
+
 import org.jetbrains.kotlin.gradle.plugin.KotlinPluginWrapper
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import java.util.Properties
-import java.io.FileInputStream
 
 plugins {
-  kotlin("jvm") version "1.2.51"
+  kotlin("jvm") version "1.3.30"
 }
 
 // get the Kotlin version from the Kotlin plugin definition
