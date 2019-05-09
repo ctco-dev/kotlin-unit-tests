@@ -9,3 +9,5 @@ dal/build
 
 # Files below aren't commited, but should usually be present
 gradle.properties
+/examples-kotlintest/build/
+/examples-junit/build/

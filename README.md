@@ -17,7 +17,7 @@ Maybe someone already took over this task.
 Also, please use pull requests for code validation.
 
 # Known Issues
-If you working behind a proxy please consider adding gradle.properties file
+* If you working behind a proxy please consider adding gradle.properties file
 ```
 systemProp.http.proxyHost=${proxy host}
 systemProp.http.proxyProtocol=http
@@ -28,3 +28,21 @@ systemProp.https.proxyProtocol=http
 systemProp.https.proxyPort=${proxy port}
 systemProp.https.nonProxyHosts=*.${corporate domain}|localhost
 ```
+
+* Currently the mocking workarounds (as in `org.mockito.plugins.MockMaker`) seem to work only on a HotSpot-derived JVM. On a SR IBM JDK 8.0-5.27 running `./gradlew build` results in
+```
+> Task :examples-junit:test
+
+com.home.services.ServiceTest > shouldCombine() FAILED
+    org.mockito.exceptions.base.MockitoException at ServiceTest.kt:12
+        Caused by: org.mockito.exceptions.base.MockitoException at ServiceTest.kt:12
+            Caused by: java.lang.instrument.UnmodifiableClassException at ServiceTest.kt:12
+
+12 tests completed, 1 failed
+
+> Task :examples-junit:test FAILED
+
+FAILURE: Build failed with an exception.
+```
+
+Same thing happens on a OpenJ9-based OpenJDK 11
